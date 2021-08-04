@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieInfoController;
+use App\Http\Controllers\MovieSearchController;
+use App\Http\Controllers\PointExchangeController;
 use App\Http\Controllers\ReviewController;
-
+use App\Http\Controllers\UserInfoController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +18,17 @@ use App\Http\Controllers\ReviewController;
 |
  */
 Route::get('/', function () {
-    return view('welcome');
+    return view('link');
+    // return _redirect('signup');
 });
 
-Route::apiResource('signup', 'App\Http\Controllers\UserRegistController');
-Route::apiResource('signin', 'App\Http\Controllers\LoginController');
-Route::get('/home',[HomeController::class,'index']);
-Route::get('/review',[ReviewController::class,'index']);
+Route::apiResource('/signup', Userregistcontroller::class);
+Route::apiResource('/signin', LoginController::class);
 
-Route::apiResource('test', 'App\Http\Controllers\TestController')->middleware('auth:sanctum');
+Route::apiResource('/search', MovieSearchController::class)->middleware('auth:sanctum');
+Route::apiResource('/mypage', UserInfoController::class)->middleware('auth:sanctum');
+Route::apiResource('/point/exchange', PointExchangeController::class)->middleware('auth:sanctum');
+
+Route::apiResource('/movie', MovieInfoController::class)->middleware('auth:sanctum');
+Route::apiResource('/home', HomeController::class)->middleware('auth:sanctum');
+Route::apiResource('/review', ReviewController::class)->middleware('auth:sanctum');

@@ -1,5 +1,5 @@
-@include('header');
+@include('share.header');
 
 <!-- Paste this area -->
 
-@include('footer');
+@include('share.footer');

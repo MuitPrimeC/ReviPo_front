@@ -21,9 +21,9 @@
                 <img src="https://img.icons8.com/ios/50/000000/amazon-prime-video.png" width="30" height="30" alt="">
                 ReviPo
             </a>
-            
+
             <!-- 検索バー -->
-            <form action="" method="POST">
+            <form action="/search" method="POST">
                 <div class="search_box">
                     <input type="text" style="width: 300px;" placeholder="いま、気になる映画は？">
                 </div>
@@ -37,7 +37,7 @@
                 </a>
             </div>
         </nav>
-    
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 

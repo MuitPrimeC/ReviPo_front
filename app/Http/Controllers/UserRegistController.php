@@ -33,7 +33,7 @@ class UserRegistController extends Controller
         $data = $request->only(array_keys($valid_dict));
         $data['password'] = Hash::make($request->password);
         User::insert($data);
-        $credentials = [$data['username'], [$data['password']]];
+        $credentials = $request->only(['username', 'password']);
         if (Auth::attempt($credentials, $remember = true)) {
             $token = $request->user()->createToken('read/write');
             return _redirect('/home');
