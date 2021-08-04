@@ -15,13 +15,22 @@
       </div>
     </a>
 
-    <form class="form-signin">
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <font color="#0000ff">{{ $error }}</font><br>
+        @endforeach
+    @endif
+    @isset($errorMessage)
+    <font color="#0000ff">{{ $errorMessage }}</font><br>
+    @endisset
+
+    <form class="form-signin" method="post" action="?">
       <img class="mb-4" src="./icon_112380_128.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox mb-3"></div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>

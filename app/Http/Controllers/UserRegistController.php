@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserRegistController extends Controller
 {
@@ -25,14 +27,19 @@ class UserRegistController extends Controller
     {
         $valid_dict = [
             'username' => ['required', 'unique:user,username'],
-            'password' => ['required'],
+            'password' => ['required', 'min:4'],
         ];
         $request->validate($valid_dict);
         $data = $request->only(array_keys($valid_dict));
+        $data['password'] = Hash::make($request->password);
         User::insert($data);
-        $credentials = $request->only(['mail', 'password']);
+        $credentials = [$data['username'], [$data['password']]];
         if (Auth::attempt($credentials, $remember = true)) {
-        return _redirect('/signin');
+            $token = $request->user()->createToken('read/write');
+            return _redirect('/home');
+        } else {
+            return _redirect('/signup');
+        }
     }
 
 }

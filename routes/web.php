@@ -17,5 +17,6 @@ Route::get('/', function () {
 });
 
 Route::apiResource('signup', 'App\Http\Controllers\UserRegistController');
+Route::apiResource('signin', 'App\Http\Controllers\LoginController');
 
 Route::apiResource('test', 'App\Http\Controllers\TestController')->middleware('auth:sanctum');
