@@ -1,0 +1,23 @@
+/*あなたへのおすすめ、ランキング*/
+.title{
+    text-align: center;
+    font-size: 30;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+
+    border-left: solid 5px black;
+    border-bottom: solid 1px black;
+
+    padding: 10px;
+}
+
+/*映画名*/
+.text{
+    font-size: 30;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+}
