@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
  */
 Route::get('/', function () {
-    return _redirect('signup');
+    return view('link');
+    // return _redirect('signup');
 });
 
 Route::apiResource('/signup', Userregistcontroller::class);
