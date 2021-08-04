@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class UserRegistController extends Controller
 {
-    //
+    /**
+     * name
+     * desc
+     */
+    public function index()
+    {
+        return view('signin');
+    }
 }
