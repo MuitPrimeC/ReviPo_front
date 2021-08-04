@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class UserInfoController extends Controller
 {
-    //
+    /**
+     * name
+     * desc
+     */
+    public function index()
+    {
+        return view('mypage');
+    }
 }

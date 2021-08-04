@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\MovieInfoController;
 use App\Http\Controllers\MovieSearchController;
+use App\Http\Controllers\PointExchangeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserInfoController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +26,8 @@ Route::apiResource('/signin', LoginController::class);
 
 Route::apiResource('/search', MovieSearchController::class)->middleware('auth:sanctum');
 Route::apiResource('/mypage', UserInfoController::class)->middleware('auth:sanctum');
+Route::apiResource('/point/exchange', PointExchangeController::class)->middleware('auth:sanctum');
 
+Route::apiResource('/movie', MovieInfoController::class)->middleware('auth:sanctum');
 Route::apiResource('/home', HomeController::class)->middleware('auth:sanctum');
 Route::apiResource('/review', ReviewController::class)->middleware('auth:sanctum');

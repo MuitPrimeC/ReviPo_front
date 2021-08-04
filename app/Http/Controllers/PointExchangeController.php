@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class PointExchangeController extends Controller
 {
-    //
+    /**
+     * name
+     * desc
+     */
+    public function index()
+    {
+        return view('point_exchange');
+    }
 }
