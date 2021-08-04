@@ -1,4 +1,4 @@
-@include('header');
+@include('share.header');
 
 <!doctype html>
 <html lang="ja" >
@@ -45,4 +45,4 @@
   </body>
 </html>
 
-@include('footer');
+@include('share.footer');
