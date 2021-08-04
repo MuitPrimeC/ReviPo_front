@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use APP\Models\Review;
+use APP\Models\History;
+use APP\Models\Ticket;
 
 // use Laravel\Sanctum\HasApiTokens;
 
@@ -42,4 +45,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+    public function histories()
+    {
+        return $this->hasMany(History::class);
+    }
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 }
