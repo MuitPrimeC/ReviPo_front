@@ -28,10 +28,12 @@
         </div>
     </diV>
     <div class="container-fluid">
+        <br>
         <h2 class="text-center">最近レビューした作品</h2>
+        <br>
         <div class="row">
         <div class="col-2">
-        <p>広告</p>
+        <a href="https://p0x0q.com/">広告</a>
         </div>
     <div class="col-10">
      <div class="container-fluid">
@@ -95,8 +97,8 @@
         </div>
     </div>
 </div>
-
-    </body>
+<br><br>
+</body>
 
 
 @include('share.footer');
