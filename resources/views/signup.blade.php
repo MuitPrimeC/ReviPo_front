@@ -32,8 +32,6 @@
         <input type="text" name="username" id="inputUsername" class="form-control" placeholder="username" required autofocus>
         <label for="inputPassword" class="sr-only">password</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="password" required>
-        <label for="re-inputPassword" class="sr-only">Re-input password</label>
-        {{-- <input type="password" id="re-inputPassword" class="form-control" placeholder="Re-input password" required>
         <div class="checkbox mb-3"></div> --}}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up!</button>
     </form>
