@@ -14,7 +14,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">YOUR POINT:</h5>
-          <p class="card-text">XXX pt</p>
+          <p class="card-text">{{Auth::user()->points}} pt</p>
         </div>
       </div>
 

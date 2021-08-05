@@ -17,7 +17,7 @@
     <body>
         <nav class="navbar navbar-light bg-light">
             <!-- ロゴ・タイトル -->
-            <a class="navbar-brand" href="./header.html">
+            <a class="navbar-brand" href="/home">
                 <img src="https://img.icons8.com/ios/50/000000/amazon-prime-video.png" width="30" height="30" alt="">
                 ReviPo
             </a>
@@ -25,18 +25,25 @@
             <!-- 検索バー -->
             <form action="/search" method="POST">
                 <div class="search_box">
-                    <input type="text" style="width: 300px;" placeholder="いま、気になる映画は？">
+                    <input type="text" name="q" style="width: 300px;" placeholder="いま、気になる映画は？">
                 </div>
             </form>
 
             <!-- ユーザー情報 -->
+            @if (Auth::check())
             <div>
-                xxpt
-                <a href="./index.html">
-                    <img src="./images/user_icon.png" width="30" height="30" alt="">
+                {{Auth::user()->username}}
+                <a href="/mypage">
+                    <img src="/images/user_icon.png" width="30" height="30" alt="">
                 </a>
-                <button type="button" onclick="location.href='http://127.0.0.1:8000/signin'" class="btn btn-outline-secondary">LOGOUT</button>
+                <button type="button" onclick="location.href='/logout'" class="btn btn-outline-secondary">LOGOUT</button>
             </div>
+            @else
+            <div>
+                <button type="button" onclick="location.href='/signin'" class="btn btn-outline-secondary">Sign-in</button>
+            </div>
+            @endif
+
         </nav>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

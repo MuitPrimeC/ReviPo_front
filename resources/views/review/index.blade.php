@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
             <div class="card mb-3">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
             <div class="card mb-3">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -75,13 +75,13 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <style>
             div.card-list{
             margin-top: 20px;
-            }  
+            }
         </style>
 
         <nav aria-label="Page navigation example">
