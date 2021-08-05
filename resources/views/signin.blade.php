@@ -37,7 +37,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
         <div class="etc-login-form">
-          <p>new user? <a href="#">create new account</a></p>
+          <p>new user? <a href="/signup">create new account</a></p>
         </div>
 
     </form>
