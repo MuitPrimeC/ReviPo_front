@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\api\GetUserController;
+use App\Http\Controllers\api\PostRecommendedController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieInfoController;
