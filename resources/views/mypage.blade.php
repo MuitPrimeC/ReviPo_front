@@ -24,14 +24,16 @@
                         <div class="card-body">
                             <h5 class="card-title">保有ポイント:</h5>
                             <p class="card-text">{{Auth::user()->points}} pt</p>
-                            <a href="/point/exchange" class="btn btn-primary">ポイント交換へ</a>
+                            <a href="/point/exchange" class="btn btn-outline-primary">ポイント交換へ</a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
                             <h5 class="card-title">保有チケット:</h5>
-                            <p class="card-text">チケット番号：xxxxxx</p>
-                            <p class="card-text">チケット番号：xxxxxx</p>
+                            @foreach ($tickets as $ticket)
+                            <span>チケット番号：{{$ticket->item_name}}</span><br>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -47,7 +49,7 @@
         <br>
         <div class="row">
             <div class="col-2">
-                <a href="https://p0x0q.com/">広告</a>
+                <a href="https://p0x0q.com/"><img src="images/ad1.jpg" width=100></a>
             </div>
             <div class="col-10">
                 <div class="container-fluid">

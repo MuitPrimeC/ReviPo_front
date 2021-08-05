@@ -18,7 +18,7 @@
         <nav class="navbar navbar-light bg-light">
             <!-- ロゴ・タイトル -->
             <a class="navbar-brand" href="/home">
-                <img src="https://img.icons8.com/ios/50/000000/amazon-prime-video.png" width="30" height="30" alt="">
+                <img src="images/logo1.png" width="30" height="30" alt="">
                 ReviPo
             </a>
 
@@ -26,7 +26,9 @@
             <form action="/search" method="GET">
                 <div class="search_box">
                     <input type="text" name="q" style="width: 300px;" placeholder="いま、気になる映画は？">
-                    <button type="submit" class="btn btn-primary">search</button>
+
+                    
+                    <button type="submit" class="btn btn-outline-dark">search</button>
                 </div>
             </form>
 
