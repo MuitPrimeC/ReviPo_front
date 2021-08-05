@@ -17,13 +17,28 @@
             <div class="card-header">
                 ユーザー名： {{Auth::user()->username}}
             </div>
-        <div class="card-body">
-            <h5 class="card-title">保有ポイント:</h5>
-            <p class="card-text">{{Auth::user()->points}} pt</p>
-            <a href="/point/exchange" class="btn btn-primary">ポイント交換へ</a>
-        </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">保有ポイント:</h5>
+                            <p class="card-text">{{Auth::user()->points}} pt</p>
+                            <a href="/point/exchange" class="btn btn-primary">ポイント交換へ</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">保有チケット:</h5>
+                            <p class="card-text">チケット番号：xxxxxx</p>
+                            <p class="card-text">チケット番号：xxxxxx</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         <div class="card-footer text-muted">
-            最終更新
+            最終更新：タイムスタンプを表示？
         </div>
         </div>
     </diV>
