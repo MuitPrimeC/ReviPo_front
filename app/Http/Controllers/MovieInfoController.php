@@ -44,8 +44,9 @@ class MovieInfoController extends Controller
 
         DB::transaction(function () use ($request, $data) {
             Review::insert($data);
-            $ave = Movie::where(['movie_id' => $data['movie_id']])->avg("score");
-            return _redirect("/ave={$ave}");
+            $movie = Movie::where(['movie_id' => $data['movie_id']]);
+            $ave = Review::where(['movie_id' => $data['movie_id']])->avg("score");
+            $movie->update(['score' => $ave]);
         });
 
         return _redirect("/movie/{$data['movie_id']}");
