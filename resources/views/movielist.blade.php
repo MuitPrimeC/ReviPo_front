@@ -19,6 +19,10 @@
 
     <body>
 
+        @foreach ($movielist as $movie)
+            {{$movie->title}}<br>
+        @endforeach
+
         <div class="card-list">
             <div class="card mb-3">
                 <div class="row no-gutters">
