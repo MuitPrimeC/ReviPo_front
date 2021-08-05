@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\api\GetUserController;
+use App\Http\Controllers\api\PostRecommendedController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieInfoController;
@@ -36,6 +38,9 @@ Route::any('logout', function (Request $request) {
     $request->session()->regenerateToken();
     return _redirect('signin');
 });
+
+Route::apiResource('/api/user/all', GetUserController::class);
+Route::apiResource('/api/recommended', PostRecommendedController::class);
 
 Route::apiResource('/signup', UserRegistController::class);
 Route::apiResource('/signin', LoginController::class);

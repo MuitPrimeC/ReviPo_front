@@ -19,6 +19,7 @@
 
     <body>
 
+
        <div class="card-list">
             @foreach($movies as $movie)
             <div class="card mb-3">
