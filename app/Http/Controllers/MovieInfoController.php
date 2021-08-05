@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use App\Models\Review;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -47,6 +48,7 @@ class MovieInfoController extends Controller
             $movie = Movie::where(['movie_id' => $data['movie_id']]);
             $ave = Review::where(['movie_id' => $data['movie_id']])->avg("score");
             $movie->update(['score' => $ave]);
+            User::where('user_id', Auth::id())->update(['points' => Auth::user()->points + 10]);
         });
 
         return _redirect("/movie/{$data['movie_id']}");
