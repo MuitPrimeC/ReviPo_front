@@ -36,10 +36,9 @@
                     </div>
                 </div>
             </div>
-
-        <div class="card-footer text-muted">
-            最終更新：タイムスタンプを表示？
-        </div>
+            <div class="card-footer text-muted">
+                最終更新：{{Auth::user()->updated_at}}
+            </div>
         </div>
     </diV>
     <div class="container-fluid">
@@ -47,73 +46,36 @@
         <h2 class="text-center">最近レビューした作品</h2>
         <br>
         <div class="row">
-        <div class="col-2">
-        <a href="https://p0x0q.com/">広告</a>
-        </div>
-    <div class="col-10">
-     <div class="container-fluid">
-        <div class="row">
-            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="Netflix_icon.svg.png" class="bd-placeholder-img card-img-top embed-responsive-item"><!--ここのclassが間違っていると思うので修正お願いします！-->
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix</h5>
-                            <p class="card-text">評価</p>
-                            <div class="progress fivestar">
-                                <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+            <div class="col-2">
+                <a href="https://p0x0q.com/">広告</a>
+            </div>
+            <div class="col-10">
+                <div class="container-fluid">
+                    <div class="row">
+                        @foreach($recent_review_movies as $review)
+                        <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="/images/movie/{{$review->movie->filename}}" class="bd-placeholder-img card-img-top embed-responsive-item">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">movie title:{{$review->movie->title}}</h5>
+                                        <p class="card-text">review title:{{$review->title}}</p>
+                                        <p class="card-text">feature:{{$review->feature}}</p>
+                                        <p class="card-text">score:{{$review->score}}</p>
+                                        <p class="card-text">description:{{$review->description}}</p>
+                                        <p class="card-text"><small class="text-muted">{{$review->updeted_at}}</small></p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="card-text">レビュー</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix</h5>
-                            <p class="card-text">評価</p>
-                            <div class="progress fivestar">
-                                <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
-                            </div>
-                            <p class="card-text">レビュー</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix</h5>
-                            <p class="card-text">評価</p>
-                            <div class="progress fivestar">
-                                <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
-                            </div>
-                            <p class="card-text">レビュー</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
         </div>
     </div>
-</div>
 <br><br>
 </body>
-
-
 @include('share.footer');
