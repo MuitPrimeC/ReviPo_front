@@ -15,11 +15,13 @@
       </div>
     </a>
 
+    <div id="calc" class="12u$">
     @if ($errors->any())
         @foreach ($errors->all() as $error)
             <font color="#0000ff">{{ $error }}</font><br>
         @endforeach
     @endif
+    </div>
     @isset($errorMessage)
     <font color="#0000ff">{{ $errorMessage }}</font><br>
     @endisset
@@ -27,13 +29,18 @@
     <form class="form-signin" method="post" action="?">
       <img class="mb-4" src="./icon_112380_128.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputUsername" class="sr-only">username</label>
+        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="username" required autofocus>
+        <label for="inputPassword" class="sr-only">password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="password" required>
         <div class="checkbox mb-3"></div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+
+        <div class="etc-login-form">
+          <p>new user? <a href="#">create new account</a></p>
+        </div>
+
+    </form>
       <style>
         .form-signin {
           width: 100%;

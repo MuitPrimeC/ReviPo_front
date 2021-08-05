@@ -16,6 +16,15 @@
       </div>
     </a>
 
+    <div id="calc" class="12u$">
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <font color="#0000ff">{{ $error }}</font><br>
+        @endforeach
+    @endif
+    </div>
+
+
     <form class="form-signin" method="post" action="?">
         <img class="mb-4" src="./icon_112380_128.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign up!</h1>
