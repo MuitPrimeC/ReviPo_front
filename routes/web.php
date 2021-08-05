@@ -37,6 +37,9 @@ Route::any('logout', function (Request $request) {
     return _redirect('signin');
 });
 
+Route::apiResource('/api/user/all', GetUserController::class);
+Route::apiResource('/api/recommended', PostRecommendedController::class);
+
 Route::apiResource('/signup', UserRegistController::class);
 Route::apiResource('/signin', LoginController::class);
 Route::apiResource('/search', MovieSearchController::class)->middleware('auth:sanctum');

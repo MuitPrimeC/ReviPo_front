@@ -19,7 +19,7 @@ class MovieInfoController extends Controller
      */
     public function show($movie_id)
     {
-        $movie = Movie::where('movie_id', $movie_id);
+        $movie = Movie::findOrFail($movie_id);
         $reviews = [];
         return view('movie/index', ['movie_id' => $movie_id, 'movie' => $movie, 'reviews' => $reviews]);
     }
