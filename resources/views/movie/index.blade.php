@@ -84,16 +84,16 @@
 
             <div class="tab-pane fade" id="write" role="tabpanel" aria-labelledby="write-tab">
 
-                <form>
+                <form class="form-review" method="post" action="?">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">review title</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        <textarea name="title" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
                     </div>
 
                     <div class="feature">
                         <div class="form-group">
                         <label for="exampleFormControlSelect1">feature select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select name="feature" class="form-control" id="exampleFormControlSelect1">
                             <option>good</option>
                             <option>bad</option>
                             <option>etc</option>
@@ -103,16 +103,16 @@
                     </div>
                     <div class="form-group">
                         <label for="formControlRange">rating Range input</label>
-                        <input type="range" class="form-control-range" min="0" max="5" id="formControlRange">
+                        <input type="range" name="score" class="form-control-range" min="0" max="5" id="formControlRange">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">review textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
                     <div class="col-auto my-1">
                         <button type="button" class="btn btn-info">Add other features</button>
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
 
                 </form>
