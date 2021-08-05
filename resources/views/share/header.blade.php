@@ -30,13 +30,20 @@
             </form>
 
             <!-- ユーザー情報 -->
+            @if (Auth::check())
             <div>
-                xxpt
-                <a href="./index.html">
+                {{Auth::user()->username}}
+                <a href="/mypage">
                     <img src="./images/user_icon.png" width="30" height="30" alt="">
                 </a>
-                <button type="button" onclick="location.href='http://127.0.0.1:8000/signin'" class="btn btn-outline-secondary">LOGOUT</button>
+                <button type="button" onclick="location.href='/signin'" class="btn btn-outline-secondary">LOGOUT</button>
             </div>
+            @else
+            <div>
+                <button type="button" onclick="location.href='/signin'" class="btn btn-outline-secondary">Sign-in</button>
+            </div>
+            @endif
+
         </nav>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
