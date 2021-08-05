@@ -50,6 +50,7 @@
         </div>
         
         </div>
+        <br><br>
     </body>
 </html>
 @include('share.footer')
