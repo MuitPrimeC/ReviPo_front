@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use APP\Models\History;
-use APP\Models\Review;
-use APP\Models\Ticket;
+use App\Models\History;
+use App\Models\Review;
+use App\Models\Ticket;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -48,14 +48,14 @@ class User extends Authenticatable
 
     public function reviews()
     {
-        return $this->hasMany(Review::class);
+        return $this->hasMany(Review::class, 'user_id');
     }
     public function histories()
     {
-        return $this->hasMany(History::class);
+        return $this->hasMany(History::class, 'user_id');
     }
     public function tickets()
     {
-        return $this->hasMany(Ticket::class);
+        return $this->hasMany(Ticket::class, 'user_id');
     }
 }
