@@ -12,6 +12,7 @@ class Review extends Model
     use HasFactory;
     protected $table = 'review';
     protected $primaryKey = 'review_id';
+    public $timestamps = true;
 
     public function user()
     {

@@ -84,7 +84,8 @@
 
             <div class="tab-pane fade" id="write" role="tabpanel" aria-labelledby="write-tab">
 
-                <form class="form-review" method="post" action="?">
+                <form class="form-review" method="post" action="/movie">
+                    <input type="hidden" name="movie_id" value="{{$movie_id}}">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">review title</label>
                         <textarea name="title" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
