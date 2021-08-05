@@ -27,8 +27,13 @@
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                         Exchange
+                        Exchange
                     </button>
+                      @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                          <font color="#0000ff">{{ $error }}</font><br>
+                        @endforeach
+                      @endif
 
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -47,7 +52,10 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">BACK</button>
-                              <button type="button" class="btn btn-primary">EXCHANGE</button>
+                              <form action="/point/exchange" method="POST">
+                                <button type="submit" class="btn btn-primary">EXCHANGE</button>
+                              </form>
+                              
                             </div>
                         </div>
                         </div>
@@ -62,9 +70,14 @@
                 <p>xxx pt</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    <button type="submmit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                        Exchange
-                  </button>
+                    </button>
+                    @if ($errors->any())
+                      @foreach ($errors->all() as $error)
+                        <font color="#0000ff">{{ $error }}</font><br>
+                      @endforeach
+                    @endif
 
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -83,7 +96,9 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">BACK</button>
-                            <button type="button" class="btn btn-primary">EXCHANGE</button>
+                            <form action="/point/exchange" method="POST">
+                                <button type="submit" class="btn btn-primary">EXCHANGE</button>
+                            </form>
                           </div>
                       </div>
                       </div>
