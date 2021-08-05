@@ -12,9 +12,16 @@ class MovieSearchController extends Controller
      * name
      * desc
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('movielist', ["movielist" => []]);
+        $valid_dict = [
+            'q' => ['required'],
+        ];
+
+        $request->validate($valid_dict);
+        $search_query = $request->q;
+        $limit = $request->has('limit') ? intval($request['limit']) : 10;
+        return view('movielist', ['movies' => Movie::whereLike("title", $search_query)->orWhereLike("description", $search_query)->orderBy('score', 'desc')->paginate(10)]);
     }
 
     /**
@@ -23,7 +30,7 @@ class MovieSearchController extends Controller
      *
      * @queryParam title string Example: イベントタイトル
      */
-    public function store(Request $request)
+    public function show(Request $request)
     {
         $valid_dict = [
             'q' => ['required'],

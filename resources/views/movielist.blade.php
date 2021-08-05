@@ -48,7 +48,7 @@
             }
         </style>
         <div class="paginate d-flex justify-content-center">
-            {{$movies->links('pagination::bootstrap-4')}}
+            {{$movies->appends(request()->input())->links('pagination::bootstrap-4')}}
         </div>
     </body>
 </html>
