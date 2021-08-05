@@ -29,6 +29,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"><a href="/movie/{{$movie->movie_id}}">{{$movie->name}}</a></h5>
+                            <p class="card-text">{{$movie->score}}</p>
                             <p class="card-text">{{$movie->discription}}</p>
                             <p class="card-text"><small class="text-muted">{{$movie->updated_at}}</small></p>
                         </div>
