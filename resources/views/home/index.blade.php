@@ -34,13 +34,25 @@
             <!--　左端の広告の列　-->
             <div class="col-md-2 justify-content-left"><div align=left><a href="https://p0x0q.com/"><img src="images/image.jpg"></a></div></div>
 
-            <!--中央のレコメンド欄とランキング欄の列-->
+            <!--中央-->
             <div class="col-md-8 justify-content-center"><div align=center>
-                <!--レコメンド欄の行-->
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="item1-tab" data-toggle="tab" href="#item1" role="tab" aria-controls="item1" aria-selected="true">あなたへのおすすめ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="item2-tab" data-toggle="tab" href="#item2" role="tab" aria-controls="item2" aria-selected="false">ランキング</a>
+                </li>
+  
+            </ul>
+            
+            <div class="tab-content">
+                <!--レコメンド-->
+                <div class="tab-pane fade show active" id="item1" role="tabpanel" aria-labelledby="item1-tab">
                 <div class="raw">
                     <p class="title">ユーザー名へのおすすめ</p>
                     <br>
-
                     <div class="container">
                         <div class="row">
                           <div class="col-sm justify-content-center"><div align=center>
@@ -81,14 +93,16 @@
                             </p>
                           </div></div>
                         </div>
-                      </div>
+                    </div>
                     <br>
                 </div>
+                </div>
+
                 <!--レコメンド欄の行-->
+                <div class="tab-pane fade" id="item2" role="tabpanel" aria-labelledby="item2-tab">
                 <div class="raw">
                     <p class="title"><a href="/review">ランキング</a></p>
                     <br>
-
                     <div class="card-list">
                         <div class="card mb-3">
                             <div class="row no-gutters">
@@ -174,8 +188,11 @@
                     </nav>
 
                 </div>
-                
-                
+
+                </div>
+            </div>
+            <br><br><br>
+            
             </div></div>
 
             <!--右端の広告の列-->
