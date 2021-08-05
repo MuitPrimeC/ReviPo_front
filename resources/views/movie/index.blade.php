@@ -52,6 +52,9 @@
                         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                           See more
                         </a>
+                        <form role="form" method="post" action="/review_score">
+                        <input type="hidden" name="">
+                        </form>
                       </p>
                       <div class="collapse" id="collapseExample">
                           test test test test test test test
