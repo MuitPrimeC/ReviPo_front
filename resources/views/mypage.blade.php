@@ -15,12 +15,12 @@
     <div　class="mypage">
         <div class="card text-center">
             <div class="card-header">
-                ユーザー名
+                ユーザー名： {{Auth::user()->username}}
             </div>
         <div class="card-body">
             <h5 class="card-title">保有ポイント:</h5>
-            <p class="card-text">〇〇pt</p>
-            <a href="#" class="btn btn-primary">ポイント交換へ</a>
+            <p class="card-text">{{Auth::user()->points}} pt</p>
+            <a href="/point/exchange" class="btn btn-primary">ポイント交換へ</a>
         </div>
         <div class="card-footer text-muted">
             最終更新
