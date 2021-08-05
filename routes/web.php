@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieInfoController;
 use App\Http\Controllers\MovieSearchController;
 use App\Http\Controllers\PointExchangeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserInfoController;
+use App\Http\Controllers\UserRegistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +25,7 @@ Route::get('/', function () {
     // return _redirect('signup');
 });
 
-Route::apiResource('/signup', Userregistcontroller::class);
+Route::apiResource('/signup', UserRegistController::class);
 Route::apiResource('/signin', LoginController::class);
 
 Route::apiResource('/search', MovieSearchController::class)->middleware('auth:sanctum');

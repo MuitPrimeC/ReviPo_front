@@ -2,18 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class MovieSearchController extends Controller
 {
 
     /**
-     * name store
+     * name
      * desc
-     *
-     * @queryParam title string Example: イベントタイトル
      */
-    public function store(Request $request)
+    public function index()
     {
         return view('movielist');
     }
