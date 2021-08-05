@@ -47,7 +47,7 @@
     <div class="container-fluid">
         <div class="row">
             <!--　左端の広告の列　-->
-            <div class="col-md-2 justify-content-left"><div align=center><a href="https://p0x0q.com/"><img src="images/ad1.jpg"></a></div></div>
+            <div class="col-md-2 justify-content-left"><div align=center><a href="https://p0x0q.com/"><img src="/images/ad1.jpg"></a></div></div>
 
             <!--中央-->
             <div class="col-md-8 justify-content-center"><div align=center>
@@ -66,7 +66,7 @@
                 <!--レコメンド-->
                 <div class="tab-pane fade show active" id="item1" role="tabpanel" aria-labelledby="item1-tab">
                 <div class="raw">
-                    <p class="title">{{Auth::user()->username}}へのおすすめ</p>
+                    <p class="title">{{Auth::user()->username}}様へのおすすめ</p>
                     <br>
                     <div class="container">
                         <div class="row h-70">
@@ -102,9 +102,9 @@
                             <a href="https://p0x0q.com/" class="card-body text-dark">
                             <div class="card">
                                 <div class="row no-gutters">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4"><div align=center>
                                     <img src="/images/sozai_cman_jp_20210805183510.png">
-                                    </div>
+                                    </div></div>
                                     <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title">約束のネバーランド</h5>
@@ -118,9 +118,9 @@
                             <a href="https://p0x0q.com/" class="card-body text-dark">
                             <div class="card">
                                 <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                    <img src="images/sozai_cman_jp_20210805183513.png">
-                                    </div>
+                                    <div class="col-md-4"><div align=center>
+                                    <img src="/images/sozai_cman_jp_20210805183513.png">
+                                    </div></div>
                                     <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title">共謀家族</h5>
@@ -134,9 +134,9 @@
                             <a href="https://p0x0q.com/" class="card-body text-dark">
                             <div class="card">
                                 <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                    <img src="images/sozai_cman_jp_20210805183516.png">
-                                    </div>
+                                    <div class="col-md-4"><div align=center>
+                                    <img src="/images/sozai_cman_jp_20210805183516.png">
+                                    </div></div>
                                     <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title">かぐや様は告らせたい</h5>
@@ -188,7 +188,7 @@
             </div></div>
 
             <!--右端の広告の列-->
-            <div class="col-md-2 justify-content-center"><div align=center><a href="https://p0x0q.com/"><img src="images/ad1.jpg"></a></div></div>
+            <div class="col-md-2 justify-content-center"><div align=center><a href="https://p0x0q.com/"><img src="/images/ad1.jpg"></a></div></div>
         </div>
     </div>
     @include('share.footer')

@@ -35,8 +35,8 @@
             <!-- ユーザー情報 -->
             @if (Auth::check())
             <div>
-                {{Auth::user()->username}}
                 <a href="/mypage">
+                {{Auth::user()->username}}
                     <img src="/images/user_icon.png" width="30" height="30" alt="">
                 </a>
                 <button type="button" onclick="location.href='/logout'" class="btn btn-outline-secondary">LOGOUT</button>

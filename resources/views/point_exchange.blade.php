@@ -13,7 +13,7 @@
     <body>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">YOUR POINT:</h5>
+          <h5 class="card-title">あなたの現在のポイント:</h5>
           <p class="card-text">{{Auth::user()->points}} pt</p>
         </div>
       </div>
@@ -21,12 +21,12 @@
             <div class="card text-center">
               <div class="card-body">
 
-                <h5 class="card-title">ticket B</h5>
-                <p>xxx pt</p>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">映画パス</h5>
+                <p>100 pt</p>
+                  <p class="card-text">お好みの劇場で映画を１本見ることができます</p>
                   <!-- Button trigger modal -->
                     <button type="submmit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                       Exchange
+                       交換
                     </button>
                     @if ($errors->any())
                       @foreach ($errors->all() as $error)
@@ -39,21 +39,21 @@
                       <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                           <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                          <h5 class="modal-title" id="exampleModalCenterTitle">ポイント交換確認画面</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
                           </div>
                           <div class="modal-body">
-                            <h5>NECESSARY POINT: 100 pt</h5>
-                            <p>YOUR POINT: {{Auth::user()->points}} pt</p>
-                            <p>BALANCE: {{Auth::user()->points - 100}} pt</p>
+                            <h5>必要ポイント: 100 pt</h5>
+                            <p>あなたのポイント: {{Auth::user()->points}} pt</p>
+                            <p>差額: {{Auth::user()->points - 100}} pt</p>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">BACK</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">戻る</button>
                             <form action="/point/exchange" method="POST">
                                 <input type="hidden" name="exchange_id", value="1">
-                                <button type="submit" class="btn btn-primary">EXCHANGE</button>
+                                <button type="submit" class="btn btn-primary">交換</button>
                             </form>
                           </div>
                       </div>
