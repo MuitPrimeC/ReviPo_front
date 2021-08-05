@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Auth;
 class PostRecommendedController extends Controller
 {
     /**
+     * name
+     * desc
+     */
+    public function index()
+    {
+        return Recommended::all();
+    }
+    /**
      * name store
      * desc
      *
@@ -27,13 +35,14 @@ class PostRecommendedController extends Controller
         //     return ['code' => 403];
         // }
         // return ::insert(data);
+        $arr = implode(',', explode(',', $request->recommended_movie_ids));
         $r = Recommended::where(['user_id' => Auth::id()]);
         if ($r->exists()) {
             $r->update([
-                'recommended_movie_ids' => $r->recommended_movie_ids,
+                'recommended_movie_ids' => $arr,
             ]);
         } else {
-            Recommended::insert(['user_id' => Auth::id(), 'recommended_movie_ids' => $request->recommended_movie_ids]);
+            Recommended::insert(['user_id' => $request->user_id, 'recommended_movie_ids' => $arr]);
         }
     }
 
