@@ -17,7 +17,7 @@
     <body>
         <nav class="navbar navbar-light bg-light">
             <!-- ロゴ・タイトル -->
-            <a class="navbar-brand" href="./header.html">
+            <a class="navbar-brand" href="/home">
                 <img src="https://img.icons8.com/ios/50/000000/amazon-prime-video.png" width="30" height="30" alt="">
                 ReviPo
             </a>
