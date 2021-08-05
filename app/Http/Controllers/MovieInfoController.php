@@ -58,6 +58,10 @@ class MovieInfoController extends Controller
             User::where('user_id', Auth::id())->update(['points' => Auth::user()->points + 10]);
         });
 
-        return _redirect("/movie/{$data['movie_id']}");
+        $value = 0;
+        $movie = Movie::where(['movie_id' => $data['movie_id']])->first();
+
+        return view("message",['value' => $value,'movie' => $movie]);
+        //return _redirect("/movie/{$data['movie_id']}");
     }
 }
