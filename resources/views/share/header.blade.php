@@ -26,7 +26,7 @@
             <form action="/search" method="GET">
                 <div class="search_box">
                     <input type="text" name="q" style="width: 300px;" placeholder="いま、気になる映画は？">
-                    <button type="submit" class="btn btn-primary">serch</button>
+                    <button type="submit" class="btn btn-primary">search</button>
                 </div>
             </form>
 

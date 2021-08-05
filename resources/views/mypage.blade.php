@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title">movie title:{{$review->movie->title}}</h5>
+                                        <h5 class="card-title"><a href="/movie/{{$review->movie->movie_id}}">movie title:{{$review->movie->title}}</a></h5>
                                         <p class="card-text">review title:{{$review->title}}</p>
                                         <p class="card-text">feature:{{$review->feature}}</p>
                                         <p class="card-text">score:{{$review->score}}</p>

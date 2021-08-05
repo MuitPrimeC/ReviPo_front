@@ -27,6 +27,8 @@ class MovieInfoController extends Controller
             'user_id' => Auth::id(),
             'movie_id' => $movie_id,
         ]);
+        
+        $reviews = Review::where('movie_id',$movie->movie_id)->orderBy('updated_at', 'desc')->paginate(10);
 
         return view('movie/index', ['movie_id' => $movie_id, 'movie' => $movie, 'reviews' => $reviews]);
     }
