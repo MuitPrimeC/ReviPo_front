@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class PointExchangeController extends Controller
 {
     /**
@@ -12,4 +14,21 @@ class PointExchangeController extends Controller
     {
         return view('point_exchange');
     }
+    /**
+     * name store
+     * desc
+     *
+     * @queryParam title string Example: イベントタイトル
+     */
+    public function store(Request $request)
+    {
+        $valid_dict = [
+            'exchange_id' => ['numeric', 'required', 'exists:exchange,exchange_id'],
+        ];
+        $request->validate($valid_dict);
+        $data = $request->only(array_keys($valid_dict));
+        return response(['code' => 'ok']);
+        // return ;
+    }
+
 }
