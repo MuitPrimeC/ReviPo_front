@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
+
 class MovieInfoController extends Controller
 {
     /**
@@ -12,6 +14,8 @@ class MovieInfoController extends Controller
      */
     public function show($movie_id)
     {
-        return view('movie/index');
+        $movie = Movie::where('movie_id', $movie_id);
+        $reviews = [];
+        return view('movie/index', ['movie' => $movie, 'reviews' => $reviews]);
     }
 }
