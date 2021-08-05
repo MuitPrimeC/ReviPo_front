@@ -11,15 +11,23 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
-
-    <div class="card">
-          <div class="card-body">
-              <h5>Your submission was successful!</h5>
-              <p>If you want to go back to the previous page, please click the button below.</p>
-              <button type="button" class="btn btn-outline-primary btn-lg btn-block">go back to the previous page</button>
-          </div>
-    </div>
-
+    @if($value==0)
+      <div class="card">
+            <div class="card-body">
+                <h5>レビュー投稿完了</h5>
+                <p>レビュー投稿が完了しました。</p>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/movie/{{$movie->movie_id}}">前のページに戻る</a></button>
+            </div>
+      </div>
+    @elseif($value==1)
+     <div class="card">
+            <div class="card-body">
+                <h5>ポイント交換完了</h5>
+                <p>ポイント交換が完了しました。</p>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/point/exchange">前のページに戻る</button>
+            </div>
+      </div>
+    @endif
     <style>
     .card {
         margin-top: 20px;

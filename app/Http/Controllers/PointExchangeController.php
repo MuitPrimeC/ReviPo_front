@@ -27,8 +27,10 @@ class PointExchangeController extends Controller
         ];
         $request->validate($valid_dict);
         $data = $request->only(array_keys($valid_dict));
-        return response(['code' => 'ok']);
-        // return ;
+
+        $value = 1;
+        //return response(['code' => 'ok']);
+        return view("message",['value' => $value]);
     }
 
 }
