@@ -1,6 +1,21 @@
 <html>
 	<head>
         <!-- CSSの埋め込み -->
+        <style type="text/css">
+            text{
+                font-size: 20; 
+                font-weight: bold;
+                font-style: italic;
+                text-decoration: underline;
+                text-align: right;
+            }
+            text2{
+                font-size: 22; 
+                font-style: italic;
+                text-decoration: underline;
+                text-align: right;
+            }
+        </style>
         <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
         <script>
         //共通パーツ読み込み
@@ -28,7 +43,7 @@
 <body>
     @include('share.header')
     <!-- headerの読み込み -->
-    <br><br>
+    <br>
     <div class="container-fluid">
         <div class="row">
             <!--　左端の広告の列　-->
@@ -39,10 +54,10 @@
 
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="item1-tab" data-toggle="tab" href="#item1" role="tab" aria-controls="item1" aria-selected="true">あなたへのおすすめ</a>
+                    <a class="nav-link active" id="item1-tab" data-toggle="tab" href="#item1" role="tab" aria-controls="item1" aria-selected="true"><text2>おすすめ</tex2t></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="item2-tab" data-toggle="tab" href="#item2" role="tab" aria-controls="item2" aria-selected="false">ランキング</a>
+                    <a class="nav-link" id="item2-tab" data-toggle="tab" href="#item2" role="tab" aria-controls="item2" aria-selected="false"><text2>ランキング</text2></a>
                 </li>
   
             </ul>
@@ -54,7 +69,7 @@
                     <p class="title">ユーザー名へのおすすめ</p>
                     <br>
                     <div class="container">
-                        <div class="row">
+                        <div class="row h-70">
                           <div class="col-sm justify-content-center"><div align=center>
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
@@ -84,21 +99,61 @@
                             </div>
                           </div></div>
                           <div class="col-sm justify-content-center"><div align=left>
-                            <p class="text">
-                                <a href="https://p0x0q.com/">１．約束のネバーランド</a>
-                                <br><br>
-                                <a href="https://p0x0q.com/">２．共謀家族</a>
-                                <br><br>
-                                <a href="https://p0x0q.com/">３．かぐや様はこくらせたい　ファイナル</a>
-                            </p>
-                          </div></div>
+                            <a href="https://p0x0q.com/" class="card-body text-dark">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                    <img src="#">
+                                    </div>
+                                    <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">約束のネバーランド</h5>
+                                        <p class="card-text"><small class="text-muted">概要</small></p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                            <br><br>
+                            <a href="https://p0x0q.com/" class="card-body text-dark">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                    <img src="#">
+                                    </div>
+                                    <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">共謀家族</h5>
+                                        <p class="card-text"><small class="text-muted">概要</small></p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                            <br><br>
+                            <a href="https://p0x0q.com/" class="card-body text-dark">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                    <img src="#">
+                                    </div>
+                                    <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">かぐや様は告らせたい</h5>
+                                        <p class="card-text"><small class="text-muted">概要</small></p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div></div>
                         </div>
                     </div>
                     <br>
                 </div>
                 </div>
 
-                <!--レコメンド欄の行-->
+                <!--ランキング欄の行-->
                 <div class="tab-pane fade" id="item2" role="tabpanel" aria-labelledby="item2-tab">
                 <div class="raw">
                     <p class="title"><a href="/review">ランキング</a></p>
@@ -146,47 +201,10 @@
                                 </div>
                             </div>
                         </div>    
-                        <div class="card mb-3">
-                            <div class="row no-gutters">
-                                <div class="col-md-4">
-                                    <img src="./icon_112380_128.png" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         
                     </div>
-                    
-                    <style>
-                        div.card-list{
-                        margin-top: 20px;
-                        }  
-                    </style>
+                    <text><a href="/review">　>>4位以降を見る　</a></text>
             
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                        </ul>
-                    </nav>
-
                 </div>
 
                 </div>
