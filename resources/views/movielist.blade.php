@@ -45,6 +45,8 @@
         <style>
             div.card-list{
             margin-top: 20px;
+            margin-left: 5px;
+            margin-right: 5px;　
             }
         </style>
         <div class="paginate d-flex justify-content-center">
