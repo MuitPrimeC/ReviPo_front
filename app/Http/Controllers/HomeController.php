@@ -14,7 +14,7 @@ class HomeController extends Controller
         $user = Auth::user();
         $movie = Movie::orderBy('score', 'desc')->paginate(3); //ランキングなら評価の平均点のカラムが欲しい
         //レコメンドのデータの受け渡しをお願いします。
-
-        return view('home.index')->with(['user' => $user, 'movies' => $movie, 'recommende']);
+        $recommended = Movie::inRandomOrder()->limit(3)->get();
+        return view('home.index')->with(['user' => $user, 'movies' => $movie, 'recommended' => $recommended]);
     } //データがないから現時点ではエラー
 }
