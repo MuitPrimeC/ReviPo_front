@@ -42,77 +42,166 @@
         </div>
         </div>
     </diV>
-    <div class="container-fluid">
-        <br>
-        <h2 class="text-center">最近レビューした作品</h2>
-        <br>
-        <div class="row">
-        <div class="col-2">
-        <a href="https://p0x0q.com/">広告</a>
-        </div>
-    <div class="col-10">
-     <div class="container-fluid">
-        <div class="row">
-            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="Netflix_icon.svg.png" class="bd-placeholder-img card-img-top embed-responsive-item"><!--ここのclassが間違っていると思うので修正お願いします！-->
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="read-tab" data-toggle="tab" href="#read" role="tab" aria-controls="read" aria-selected="true">Read</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="write-tab" data-toggle="tab" href="#write" role="tab" aria-controls="write" aria-selected="false">Write</a>
+            </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="recent-review" role="tabpanel" aria-labelledby="recent-review-tab">
+            <div class="container-fluid">
+                <br>
+                <h2 class="text-center">最近レビューした作品</h2>
+                <br>
+                <div class="row">
+                    <div class="col-2">
+                        <a href="https://p0x0q.com/">広告</a>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix</h5>
-                            <p class="card-text">評価</p>
-                            <div class="progress fivestar">
-                                <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                    <div class="col-10">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="Netflix_icon.svg.png" class="bd-placeholder-img card-img-top embed-responsive-item"><!--ここのclassが間違っていると思うので修正お願いします！-->
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Netflix</h5>
+                                            <p class="card-text">評価</p>
+                                                <div class="progress fivestar">
+                                                    <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                                                </div>
+                                                <p class="card-text">レビュー</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="card-text">レビュー</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
+                                    </div>
+                                <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Netflix</h5>
+                                    <p class="card-text">評価</p>
+                                    <div class="progress fivestar">
+                                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                                    </div>
+                                    <p class="card-text">レビュー</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix</h5>
-                            <p class="card-text">評価</p>
-                            <div class="progress fivestar">
-                                <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                    <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
                             </div>
-                            <p class="card-text">レビュー</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix</h5>
-                            <p class="card-text">評価</p>
-                            <div class="progress fivestar">
-                                <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Netflix</h5>
+                                    <p class="card-text">評価</p>
+                                    <div class="progress fivestar">
+                                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                                    </div>
+                                    <p class="card-text">レビュー</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
                             </div>
-                            <p class="card-text">レビュー</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
-                    </div>
+                     </div>
                 </div>
             </div>
-        </div>
-        </div>
         </div>
     </div>
 </div>
 <br><br>
+</div>
+
+        <div class="tab-pane fade" id="recent-read" role="tabpanel" aria-labelledby="recent-read-tab">
+            <div class="container-fluid">   
+                <br>
+                <h2 class="text-center">最近レビューした作品</h2>
+                <br>
+                <div class="row">
+                    <div class="col-2">
+                        <a href="https://p0x0q.com/">広告</a>
+                    </div>
+                    <div class="col-10">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="Netflix_icon.svg.png" class="bd-placeholder-img card-img-top embed-responsive-item"><!--ここのclassが間違っていると思うので修正お願いします！-->
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Netflix</h5>
+                                            <p class="card-text">評価</p>
+                                                <div class="progress fivestar">
+                                                    <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                                                </div>
+                                                <p class="card-text">レビュー</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
+                                    </div>
+                                <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Netflix</h5>
+                                    <p class="card-text">評価</p>
+                                    <div class="progress fivestar">
+                                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                                    </div>
+                                    <p class="card-text">レビュー</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="316KlVKkYiL.jpg" class="bd-placeholder-img card-img-top embed-responsive-item">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Netflix</h5>
+                                    <p class="card-text">評価</p>
+                                    <div class="progress fivestar">
+                                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                                    </div>
+                                    <p class="card-text">レビュー</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+</div>
+
+</div>
 </body>
 
 
