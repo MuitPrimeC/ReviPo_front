@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index() //homeの表示
     {
         $user = Auth::user();
-        $movie = Movie::orderBy('updated_at','desc')->paginate(5);//ランキングなら評価の平均点のカラムが欲しい
+        $movie = Movie::orderBy('score','desc')->paginate(3);//ランキングなら評価の平均点のカラムが欲しい
         //レコメンドのデータの受け渡しをお願いします。
 
         return view('home.index')->with(['user'=>$user,'movies'=>$movie]);
