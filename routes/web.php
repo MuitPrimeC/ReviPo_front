@@ -8,6 +8,8 @@ use App\Http\Controllers\PointExchangeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserInfoController;
 use App\Http\Controllers\UserRegistController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +29,13 @@ Route::get('/', function () {
 Route::any('/login', function () {
     return _redirect('signin');
 })->name('login');
+
+Route::any('logout', function (Request $request) {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return _redirect('signin');
+});
 
 Route::apiResource('/signup', UserRegistController::class);
 Route::apiResource('/signin', LoginController::class);
