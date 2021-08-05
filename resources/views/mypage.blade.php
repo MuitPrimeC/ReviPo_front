@@ -30,8 +30,10 @@
                     <div class="col-md-6">
                         <div class="card-body">
                             <h5 class="card-title">保有チケット:</h5>
-                            <p class="card-text">チケット番号：xxxxxx</p>
-                            <p class="card-text">チケット番号：xxxxxx</p>
+                            @foreach ($tickets as $ticket)
+                            <span>チケット番号：{{$ticket->item_name}}</span><br>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
