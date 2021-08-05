@@ -24,10 +24,19 @@
             <div class="card-body">
                 <h5>ポイント交換完了</h5>
                 <p>ポイント交換が完了しました。</p>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/point/exchange">前のページに戻る</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/mypage">前のページに戻る</a></button>
             </div>
       </div>
+    @elseif ($value==1)
+    <div class="card">
+        <div class="card-body">
+            <h5>ポイント交換失敗</h5>
+            <p>ポイントが足りません。</p>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/point/exchange">前のページに戻る</a></button>
+        </div>
+    </div>
     @endif
+
     <style>
     .card {
         margin-top: 20px;

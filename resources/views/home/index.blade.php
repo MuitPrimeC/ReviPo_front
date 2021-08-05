@@ -3,14 +3,14 @@
         <!-- CSSの埋め込み -->
         <style type="text/css">
             text{
-                font-size: 20; 
+                font-size: 20;
                 font-weight: bold;
                 font-style: italic;
                 text-decoration: underline;
                 text-align: right;
             }
             text2{
-                font-size: 22; 
+                font-size: 22;
                 font-style: italic;
                 text-decoration: underline;
                 text-align: right;
@@ -27,15 +27,15 @@
         <!-- 自作.CSSはこちらから追加で（パスは正しく入れてくれ） -->
         <link rel="stylesheet" href="home_style.css">
         <!-- Bootstrapの埋め込み -->
-        <link 
-            rel="stylesheet" 
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous"
         >
-        <script 
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
         <!-- ここまで（ところで、この.jsいるんか？） -->
@@ -59,14 +59,14 @@
                 <li class="nav-item">
                     <a class="nav-link" id="item2-tab" data-toggle="tab" href="#item2" role="tab" aria-controls="item2" aria-selected="false"><text2>ランキング</text2></a>
                 </li>
-  
+
             </ul>
-            
+
             <div class="tab-content">
                 <!--レコメンド-->
                 <div class="tab-pane fade show active" id="item1" role="tabpanel" aria-labelledby="item1-tab">
                 <div class="raw">
-                    <p class="title">ユーザー名へのおすすめ</p>
+                    <p class="title">{{Auth::user()->username}}へのおすすめ</p>
                     <br>
                     <div class="container">
                         <div class="row h-70">
@@ -175,16 +175,16 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach 
+                        @endforeach
                     </div>
                     <text><a href="/review">　>>4位以降を見る　</a></text>
-            
+
                 </div>
 
                 </div>
             </div>
             <br><br><br>
-            
+
             </div></div>
 
             <!--右端の広告の列-->
