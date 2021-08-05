@@ -47,7 +47,7 @@
     <div class="container-fluid">
         <div class="row">
             <!--　左端の広告の列　-->
-            <div class="col-md-2 justify-content-left"><div align=left><a href="https://p0x0q.com/"><img src="images/image.jpg"></a></div></div>
+            <div class="col-md-2 justify-content-left"><div align=center><a href="https://p0x0q.com/"><img src="images/ad1.jpg"></a></div></div>
 
             <!--中央-->
             <div class="col-md-8 justify-content-center"><div align=center>
@@ -103,7 +103,7 @@
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                    <img src="#">
+                                    <img src="/images/sozai_cman_jp_20210805183510.png">
                                     </div>
                                     <div class="col-md-8">
                                     <div class="card-body">
@@ -119,7 +119,7 @@
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                    <img src="#">
+                                    <img src="images/sozai_cman_jp_20210805183513.png">
                                     </div>
                                     <div class="col-md-8">
                                     <div class="card-body">
@@ -135,7 +135,7 @@
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                    <img src="#">
+                                    <img src="images/sozai_cman_jp_20210805183516.png">
                                     </div>
                                     <div class="col-md-8">
                                     <div class="card-body">
@@ -188,7 +188,7 @@
             </div></div>
 
             <!--右端の広告の列-->
-            <div class="col-md-2 justify-content-center"><div align=right><a href="https://p0x0q.com/"><img src="images/image.jpg"></a></div></div>
+            <div class="col-md-2 justify-content-center"><div align=center><a href="https://p0x0q.com/"><img src="images/ad1.jpg"></a></div></div>
         </div>
     </div>
     @include('share.footer')
