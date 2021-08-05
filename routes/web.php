@@ -30,7 +30,6 @@ Route::any('/login', function () {
 
 Route::apiResource('/signup', UserRegistController::class);
 Route::apiResource('/signin', LoginController::class);
-
 Route::apiResource('/search', MovieSearchController::class)->middleware('auth:sanctum');
 Route::apiResource('/mypage', UserInfoController::class)->middleware('auth:sanctum');
 Route::apiResource('/point/exchange', PointExchangeController::class)->middleware('auth:sanctum');
