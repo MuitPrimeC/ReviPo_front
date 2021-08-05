@@ -24,6 +24,9 @@ Route::get('/', function () {
     return view('link');
     // return _redirect('signup');
 });
+Route::any('/login', function () {
+    return _redirect('signin');
+});
 
 Route::apiResource('/signup', UserRegistController::class);
 Route::apiResource('/signin', LoginController::class);
