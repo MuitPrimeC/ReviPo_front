@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use APP\Models\History;
+use APP\Models\Review;
+use App\Models\Traits\WhereLike;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use APP\Models\Review;
-use APP\Models\History;
 
 class Movie extends Model
 {
-    use HasFactory;
+    use HasFactory, WhereLike;
     protected $table = 'movie';
     protected $primaryKey = 'movie_id';
 

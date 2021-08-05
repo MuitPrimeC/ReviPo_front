@@ -25,7 +25,7 @@
             <!-- 検索バー -->
             <form action="/search" method="POST">
                 <div class="search_box">
-                    <input type="text" style="width: 300px;" placeholder="いま、気になる映画は？">
+                    <input type="text" name="q" style="width: 300px;" placeholder="いま、気になる映画は？">
                 </div>
             </form>
 
