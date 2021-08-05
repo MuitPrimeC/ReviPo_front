@@ -34,5 +34,5 @@ class MovieSearchController extends Controller
         $limit = $request->has('limit') ? intval($request['limit']) : 10;
         return view('movielist', ['movielist' => Movie::whereLike("title", $search_query)->orWhereLike("description", $search_query)->simplePaginate($limit)]);
     }
-
 }
+
