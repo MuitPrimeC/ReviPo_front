@@ -37,17 +37,18 @@
 
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="read" role="tabpanel" aria-labelledby="read-tab">
-
+              @foreach($reviews as $review)
                 <div class="card">
                     <div class="card-header">
-                      Review1
+                      {{$review->user->username}}
                     </div>
                     <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
+                      <h5 class="card-title">{{$review->title}}</h5>
                       <div class="progress fivestar">
                         <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
                     </div>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text">feature:{{$review->feature}}</p>
+                      <p class="card-text">score:{{$review->score}}</p>
                       <p>
                         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                           See more
@@ -57,33 +58,15 @@
                         </form>
                       </p>
                       <div class="collapse" id="collapseExample">
-                          test test test test test test test
+                          description:{{$review->description}}
                       </div>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div class="card-header">
-                      Review2
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <div class="progress fivestar">
-                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
-                    </div>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <p>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-1" role="button" aria-expanded="false" aria-controls="collapseExample-1">
-                          See more
-                        </a>
-                      </p>
-                      <div class="collapse" id="collapseExample-1">
-                          hoge hoge
-                      </div>
-                    </div>
+                @endforeach
+                <div class="paginate d-flex justify-content-center">
+                  {{$reviews->links('pagination::bootstrap-4')}}
                 </div>
             </div>
-
             <div class="tab-pane fade" id="write" role="tabpanel" aria-labelledby="write-tab">
 
                 <form class="form-review" method="post" action="/movie">
