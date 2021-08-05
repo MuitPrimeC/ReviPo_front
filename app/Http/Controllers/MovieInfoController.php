@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\History;
 use App\Models\Movie;
 use App\Models\Review;
 use App\Models\User;
@@ -19,8 +20,14 @@ class MovieInfoController extends Controller
      */
     public function show($movie_id)
     {
-        $movie = Movie::where('movie_id', $movie_id);
+        $movie = Movie::findOrFail($movie_id);
         $reviews = [];
+
+        History::insert([
+            'user_id' => Auth::id(),
+            'movie_id' => $movie_id,
+        ]);
+
         return view('movie/index', ['movie_id' => $movie_id, 'movie' => $movie, 'reviews' => $reviews]);
     }
 
