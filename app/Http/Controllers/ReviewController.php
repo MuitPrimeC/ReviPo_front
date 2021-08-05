@@ -13,8 +13,8 @@ class ReviewController extends Controller
     {
         $user = Auth::user();
         $movie = Movie::orderBy('score', 'desc')->paginate(10); //ランキングなら評価の平均点のカラムが欲しい
-
-        return view('review.index')->with(['user' => $user, 'movies' => $movie]); 
+        // $recommended = Movie::orderBy('')
+        return view('review.index')->with(['user' => $user, 'movies' => $movie]);
     }
 
 }

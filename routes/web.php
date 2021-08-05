@@ -8,6 +8,7 @@ use App\Http\Controllers\MovieInfoController;
 use App\Http\Controllers\MovieSearchController;
 use App\Http\Controllers\PointExchangeController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ReviewScoreController;
 use App\Http\Controllers\UserInfoController;
 use App\Http\Controllers\UserRegistController;
 use Illuminate\Http\Request;
@@ -51,6 +52,7 @@ Route::apiResource('/point/exchange', PointExchangeController::class)->middlewar
 Route::apiResource('/movie', MovieInfoController::class)->middleware('auth:sanctum');
 Route::apiResource('/home', HomeController::class)->middleware('auth:sanctum');
 Route::apiResource('/review', ReviewController::class)->middleware('auth:sanctum');
+Route::apiResource('/review_score', ReviewScoreController::class)->middleware('auth:sanctum');
 Route::any('message', function (Request $request) {
     return view('message');
 });
