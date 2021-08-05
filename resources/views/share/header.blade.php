@@ -35,6 +35,7 @@
                 <a href="./index.html">
                     <img src="./images/user_icon.png" width="30" height="30" alt="">
                 </a>
+                <button type="button" onclick="location.href='http://127.0.0.1:8000/signin'" class="btn btn-outline-secondary">LOGOUT</button>
             </div>
         </nav>
 
