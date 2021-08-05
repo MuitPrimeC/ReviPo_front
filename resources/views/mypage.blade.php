@@ -43,12 +43,15 @@
         </div>
     </diV>
 
+    <!--div class="tab-pane fade show active" id="recent-review" role="tabpanel" aria-labelledby="recent-review-tab">-->
+    <!--<div class="tab-pane fade" id="recent-view" role="tabpanel" aria-labelledby="recent-read-tab">-->
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" id="read-tab" data-toggle="tab" href="#read" role="tab" aria-controls="read" aria-selected="true">Read</a>
+              <a class="nav-link active" id="recent-review" data-toggle="tab" href="#" role="tab" aria-controls="recent-review" aria-selected="true">最近レビューした作品</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" id="write-tab" data-toggle="tab" href="#write" role="tab" aria-controls="write" aria-selected="false">Write</a>
+              <a class="nav-link" id="recent-view" data-toggle="tab" href="#recent-view" role="tab" aria-controls="recent-view" aria-selected="false">最近閲覧した作品</a>
             </li>
     </ul>
 
@@ -59,9 +62,9 @@
                 <h2 class="text-center">最近レビューした作品</h2>
                 <br>
                 <div class="row">
-                    <div class="col-2">
+                    <!--<div class="col-2">
                         <a href="https://p0x0q.com/">広告</a>
-                    </div>
+                    </div>-->
                     <div class="col-10">
                         <div class="container-fluid">
                             <div class="row">
@@ -127,15 +130,15 @@
 <br><br>
 </div>
 
-        <div class="tab-pane fade" id="recent-read" role="tabpanel" aria-labelledby="recent-read-tab">
+        <div class="tab-pane fade" id="recent-view" role="tabpanel" aria-labelledby="recent-view-tab">
             <div class="container-fluid">   
                 <br>
-                <h2 class="text-center">最近レビューした作品</h2>
+                <h2 class="text-center">最近閲覧した作品</h2>
                 <br>
                 <div class="row">
-                    <div class="col-2">
+                    <!--<div class="col-2">
                         <a href="https://p0x0q.com/">広告</a>
-                    </div>
+                    </div>-->
                     <div class="col-10">
                         <div class="container-fluid">
                             <div class="row">
