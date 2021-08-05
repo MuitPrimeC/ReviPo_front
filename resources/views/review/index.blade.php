@@ -17,8 +17,8 @@
     </head>
 
     <body>
-       
-
+        <div class="container">
+         
         <div class="card-list">
             @foreach($movies as $movie)
             <div class="card mb-3">
@@ -49,6 +49,7 @@
             {{$movies->links('pagination::bootstrap-4')}}
         </div>
         
+        </div>
     </body>
 </html>
 @include('share.footer')
