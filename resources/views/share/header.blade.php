@@ -18,7 +18,7 @@
         <nav class="navbar navbar-light bg-light">
             <!-- ロゴ・タイトル -->
             <a class="navbar-brand" href="/home">
-                <img src="images/logo1.png" width="30" height="30" alt="">
+                <img src="/images/logo1.png" width="30" height="30" alt="">
                 ReviPo
             </a>
 
@@ -35,8 +35,8 @@
             <!-- ユーザー情報 -->
             @if (Auth::check())
             <div>
-                {{Auth::user()->username}}
                 <a href="/mypage">
+                {{Auth::user()->username}}
                     <img src="/images/user_icon.png" width="30" height="30" alt="">
                 </a>
                 <button type="button" onclick="location.href='/logout'" class="btn btn-outline-secondary">LOGOUT</button>
