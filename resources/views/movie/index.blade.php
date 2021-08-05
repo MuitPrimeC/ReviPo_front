@@ -45,10 +45,13 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">Special title treatment</h5>
+                      <div class="progress fivestar">
+                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                    </div>
                       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                       <p>
                         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          click
+                          See more
                         </a>
                       </p>
                       <div class="collapse" id="collapseExample">
@@ -63,10 +66,13 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">Special title treatment</h5>
+                      <div class="progress fivestar">
+                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                    </div>
                       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                       <p>
                         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-1" role="button" aria-expanded="false" aria-controls="collapseExample-1">
-                          click
+                          See more
                         </a>
                       </p>
                       <div class="collapse" id="collapseExample-1">
@@ -80,27 +86,27 @@
 
                 <form>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <label for="exampleFormControlTextarea1">review title</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
                     </div>
 
                     <div class="feature">
                         <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
+                        <label for="exampleFormControlSelect1">feature select</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>good</option>
+                            <option>bad</option>
+                            <option>etc</option>
+                            <option>etc</option>
+                            <option>etc</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="formControlRange">Example Range input</label>
-                        <input type="range" class="form-control-range" id="formControlRange">
+                        <label for="formControlRange">rating Range input</label>
+                        <input type="range" class="form-control-range" min="0" max="5" id="formControlRange">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <label for="exampleFormControlTextarea1">review textarea</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
@@ -113,4 +119,5 @@
             </div>
     </body>
 </html>
+
 @include('share.footer');
