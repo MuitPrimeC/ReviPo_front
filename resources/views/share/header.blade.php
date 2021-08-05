@@ -36,7 +36,7 @@
                 <a href="/mypage">
                     <img src="./images/user_icon.png" width="30" height="30" alt="">
                 </a>
-                <button type="button" onclick="location.href='/signin'" class="btn btn-outline-secondary">LOGOUT</button>
+                <button type="button" onclick="location.href='/logout'" class="btn btn-outline-secondary">LOGOUT</button>
             </div>
             @else
             <div>

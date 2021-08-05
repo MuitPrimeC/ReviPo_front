@@ -8,8 +8,8 @@ use App\Http\Controllers\PointExchangeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserInfoController;
 use App\Http\Controllers\UserRegistController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
