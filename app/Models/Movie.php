@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use APP\Models\History;
-use APP\Models\Review;
+use App\Models\History;
+use App\Models\Review;
 use App\Models\Traits\WhereLike;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

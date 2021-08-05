@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Movie;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use APP\Models\User;
-use APP\Models\Movie;
 
 class Review extends Model
 {
@@ -22,4 +22,3 @@ class Review extends Model
         return $this->belongsTo(Movie::class);
     }
 }
-
