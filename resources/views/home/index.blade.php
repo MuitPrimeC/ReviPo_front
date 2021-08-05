@@ -78,15 +78,19 @@
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                 </ol>
                                 <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/2.jpg" class="d-block w-100" alt="First">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/3.jpg" class="d-block w-100" alt="Second">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/4.jpg" class="d-block w-100" alt="Third">
-                                </div>
+
+                                    @foreach ($recommended as $r)
+                                    @if ($loop->first)
+                                    <div class="carousel-item active">
+                                        <img src="images/movie/{{$r->filename}}" class="d-block w-100" alt="Second">
+                                    </div>
+                                    @else
+                                    <div class="carousel-item">
+                                        <img src="images/movie/{{$r->filename}}" class="d-block w-100" alt="Second">
+                                    </div>
+                                    @endif
+                                    @endforeach
+
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -99,27 +103,31 @@
                             </div>
                           </div></div>
                           <div class="col-sm justify-content-center"><div align=left>
-                            <a href="https://p0x0q.com/" class="card-body text-dark">
-                            <div class="card">
-                                <div class="row no-gutters">
-                                    <div class="col-md-4"><div align=center>
-                                    <img src="/images/sozai_cman_jp_20210805183510.png">
-                                    </div></div>
-                                    <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">約束のネバーランド</h5>
-                                        <p class="card-text"><small class="text-muted">概要</small></p>
-                                    </div>
+
+                            @foreach ($recommended as $r)
+                            <a href="/movie/{{$r->movie_id}}" class="card-body text-dark">
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4"><div align=center>
+                                        <img src="/images/rank{{$loop->iteration}}.png">
+                                        </div></div>
+                                        <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{$r->title}}</h5>
+                                            <p class="card-text"><small class="text-muted">概要</small></p>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            </a>
-                            <br><br>
-                            <a href="https://p0x0q.com/" class="card-body text-dark">
+                                </a>
+                                <br><br>
+                            @endforeach
+
+                            {{-- <a href="https://p0x0q.com/" class="card-body text-dark">
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-md-4"><div align=center>
-                                    <img src="/images/sozai_cman_jp_20210805183513.png">
+                                    <img src="/images/rank2.png">
                                     </div></div>
                                     <div class="col-md-8">
                                     <div class="card-body">
@@ -135,7 +143,7 @@
                             <div class="card">
                                 <div class="row no-gutters">
                                     <div class="col-md-4"><div align=center>
-                                    <img src="/images/sozai_cman_jp_20210805183516.png">
+                                    <img src="/images/rank3.png">
                                     </div></div>
                                     <div class="col-md-8">
                                     <div class="card-body">
@@ -145,7 +153,7 @@
                                     </div>
                                 </div>
                             </div>
-                            </a>
+                            </a> --}}
                         </div></div>
                         </div>
                     </div>

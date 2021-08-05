@@ -97,7 +97,7 @@
                     </div>
 
                     <div class="col-auto my-1">
-                        <button type="button" class="btn btn-info">Add other features</button>
+                        {{-- <button type="button" class="btn btn-info">Add other features</button> --}}
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
 
