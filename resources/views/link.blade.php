@@ -8,5 +8,6 @@
 <a href="/movie/abcdef">smovieinfo.html</a><br>
 <a href="/home">home.html</a><br>
 <a href="/review">review.html</a><br>
+<a href="/message">message.blade.php</a><br>
 
 @include('share.footer');

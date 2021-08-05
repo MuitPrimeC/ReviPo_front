@@ -46,3 +46,6 @@ Route::apiResource('/point/exchange', PointExchangeController::class)->middlewar
 Route::apiResource('/movie', MovieInfoController::class)->middleware('auth:sanctum');
 Route::apiResource('/home', HomeController::class)->middleware('auth:sanctum');
 Route::apiResource('/review', ReviewController::class)->middleware('auth:sanctum');
+Route::any('message', function (Request $request) {
+    return view('message');
+});
