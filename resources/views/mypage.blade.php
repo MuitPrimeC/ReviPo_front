@@ -48,7 +48,7 @@
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" id="recent-review" data-toggle="tab" href="#" role="tab" aria-controls="recent-review" aria-selected="true">最近レビューした作品</a>
+              <a class="nav-link active" id="recent-review" data-toggle="tab" href="#recent-review" role="tab" aria-controls="recent-review" aria-selected="true">最近レビューした作品</a>
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" id="recent-view" data-toggle="tab" href="#recent-view" role="tab" aria-controls="recent-view" aria-selected="false">最近閲覧した作品</a>
