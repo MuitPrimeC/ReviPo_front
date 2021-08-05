@@ -18,4 +18,5 @@ class ReviewController extends Controller
 
         return view('review.index')->with(['user' => $user, 'movies' => $movie, 'reviews' => $review]); //paginateで個数指定
     } //データがないから現時点ではエラー
+
 }
