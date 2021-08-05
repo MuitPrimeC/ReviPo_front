@@ -19,7 +19,7 @@
                 <hr>
                 <div class="row align-items-center">
                     <div class="col-12 col-md-4">
-                        <img src="images/logo1.png" width="100" height="100" style="display: block; margin: auto;">
+                        <img src="/images/logo1.png" width="100" height="100" style="display: block; margin: auto;">
                         <div style="text-align: center;">
                             <h4>ReviPo</h4>
                             <p style="font-size: smaller; margin-top: 1rem; font-family: 'Courier New', Courier, monospace;">

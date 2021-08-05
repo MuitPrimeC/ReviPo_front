@@ -18,7 +18,7 @@
         <nav class="navbar navbar-light bg-light">
             <!-- ロゴ・タイトル -->
             <a class="navbar-brand" href="/home">
-                <img src="images/logo1.png" width="30" height="30" alt="">
+                <img src="/images/logo1.png" width="30" height="30" alt="">
                 ReviPo
             </a>
 
