@@ -31,10 +31,6 @@ class PostRecommendedController extends Controller
         ];
         $request->validate($valid_dict);
         $data = $request->only(array_keys($valid_dict));
-        // if(!Gate::allows(, $request->group_id)){
-        //     return ['code' => 403];
-        // }
-        // return ::insert(data);
         $valid_arr = [];
         foreach (explode(',', $request->recommended_movie_ids) as $movie_id) {
             if (Movie::where('movie_id', $movie_id)->exists()) {
