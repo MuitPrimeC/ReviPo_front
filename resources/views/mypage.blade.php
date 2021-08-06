@@ -101,20 +101,17 @@
                         <div class="col-10">
                             <div class="container-fluid">
                                 <div class="row">
-                                    @foreach($user_histories as $history)
+                                    @foreach($user_movies as $movie)
                                     <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
-                                                <img src="/images/movie/{{$review->movie->filename}}" class="bd-placeholder-img card-img-top embed-responsive-item">
+                                                <img src="/images/movie/{{$movie->filename}}" class="bd-placeholder-img card-img-top embed-responsive-item">
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="card-body">
-                                                    <h5 class="card-title"><a href="/movie/{{$review->movie->movie_id}}">movie title:{{$review->movie->title}}</a></h5>
-                                                    <p class="card-text">review title:{{$review->title}}</p>
-                                                    <p class="card-text">feature:{{$review->feature}}</p>
-                                                    <p class="card-text">score:{{$review->score}}</p>
-                                                    <p class="card-text">description:{{$review->description}}</p>
-                                                    <p class="card-text"><small class="text-muted">{{$review->updeted_at}}</small></p>
+                                                    <h5 class="card-title"><a href="/movie/{{$movie->movie_id}}">movie title:{{$movie->title}}</a></h5>
+                                                    <p class="card-text">score:{{$movie->score}}</p>
+                                                    <p class="card-text"><small class="text-muted">{{$movie->updeted_at}}</small></p>
                                                 </div>
                                             </div>
                                         </div>
