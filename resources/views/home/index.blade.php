@@ -177,7 +177,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="/movie/{{$movie->movie_id}}">{{$movie->title}}</a></h5>
                                             <p class="result-rating-rate">
-                                                <span class="star5_rating" data-rate="{{$movie->score}}"></span>
+                                                <span class="star5_rating" data-rate="{{round($movie->score)}}"></span>
                                                 <span class="number_rating">{{$movie->score}}</span>
                                             </p>
                                             <!--<p class="card-text">{{$movie->score}}</p>-->
