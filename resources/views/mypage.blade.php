@@ -62,9 +62,6 @@
                 <h2 class="text-center">最近レビューした作品</h2>
                 <br>
                 <div class="row">
-                    <!--<div class="col-2">
-                        <a href="https://p0x0q.com/"><img src="images/ad1.jpg" width=100></a>
-                    </div>-->
                     <div class="col-10">
                         <div class="container-fluid">
                             <div class="row">
@@ -101,13 +98,10 @@
                     <h2 class="text-center">最近閲覧した作品</h2>
                     <br>
                     <div class="row">
-                        <!--<div class="col-2">
-                            <a href="https://p0x0q.com/"><img src="images/ad1.jpg" width=100></a>
-                        </div>-->
                         <div class="col-10">
                             <div class="container-fluid">
                                 <div class="row">
-                                    @foreach($recent_review_movies as $review)
+                                    @foreach($user_histories as $history)
                                     <div class="card md-auto col-6" style="max-width: 540px; max-height:200px;">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">

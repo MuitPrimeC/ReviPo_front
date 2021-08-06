@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
+use App\Models\History;
 use Illuminate\Support\Facades\Auth;
 
 class UserInfoController extends Controller
@@ -19,8 +20,11 @@ class UserInfoController extends Controller
             $review = $d->get();
         } else {
             $review = [];
-        }
+        $user_history = history::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->distinct()->select('movie_id')->simplePaginate(10);
+        dd($user_history);
 
-        return view('mypage', ['recent_review_movies' => $recent_review_movies, 'tickets' => $review]);
+
+        return view('mypage', ['recent_review_movies' => $recent_review_movies, 'tickets' => $review, 'user_histories' => $user_history]);
     }
+}
 }
