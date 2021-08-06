@@ -18,10 +18,10 @@ class GetUserController extends Controller
         foreach (User::all() as $user) {
             $movie_ids = [];
             foreach (History::where('user_id', $user['user_id'])->get() as $history) {
-                if (array_key_exists($history->movie_id, $movie_ids)) {
-                    continue;
+                if (!in_array($history->movie_id, $movie_ids)) {
+                    array_push($movie_ids, $history->movie_id);
                 }
-                array_push($movie_ids, $history->movie_id);
+
             }
             array_push($r, ['user_id' => $user['user_id'], 'history' => $movie_ids]);
         }
