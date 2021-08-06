@@ -1,4 +1,4 @@
-@include('share.header',['title' => 'テストタイトル']);
+@include('share.header',['title' => 'テストタイトル'])
 
 <!DOCTYPE HTML>
 <html lang="ja">
@@ -45,9 +45,10 @@
                     <div class="card-body">
                       <h5 class="card-title">{{$review->title}}</h5>
                       <div class="progress fivestar">
-                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
+                        <div class="progress-bar progress-bar-star" role="progressbar" style="width: {{$review->score/5*100}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div><!--あくまで仮の形でお願いします-->
                     </div>
-                      <p class="card-text">feature:{{$review->feature}}</p>
+                      <p class="card-text">{{$review->feature}}</p>
+                      <p class="card-text">{{$review->description}}</p>
                       <p class="card-text">score:{{$review->score}}</p>
                       <p>
                         <!--<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">

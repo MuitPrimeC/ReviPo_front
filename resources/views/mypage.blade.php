@@ -75,13 +75,13 @@
                                         <div class="col-md-8">
                                             <div class="card-body">
                                                 <h5 class="card-title"><a href="/movie/{{$review->movie->movie_id}}">movie title:{{$review->movie->title}}</a></h5>
-                                                <p class="card-text">review title:{{$review->title}}</p>
-                                                <p class="card-text">feature:{{$review->feature}}</p>
+                                                <p class="card-text">{{$review->title}}</p>
+                                                <p class="card-text">{{$review->feature}}</p>
                                                 <p class="result-rating-rate">
                                                     <span class="star5_rating" data-rate="{{round($review->score)}}"></span>
                                                     <span class="number_rating">{{$review->score}}</span>
                                                 </p>
-                                                <p class="card-text">description:{{$review->description}}</p>
+                                                {{-- <p class="card-text">description:{{$review->description}}</p> --}}
                                                 <p class="card-text"><small class="text-muted">{{$review->updeted_at}}</small></p>
                                             </div>
                                         </div>
