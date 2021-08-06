@@ -10,4 +10,4 @@
 <a href="/review">review.html</a><br>
 <a href="/message">message.blade.php</a><br>
 
-@include('share.footer');
+@include('share.footer')

@@ -135,4 +135,4 @@
 
 <br><br>
 </body>
-@include('share.footer');
+@include('share.footer')

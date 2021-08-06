@@ -2,4 +2,4 @@
 
 <!-- Paste this area -->
 
-@include('share.footer');
+@include('share.footer')
