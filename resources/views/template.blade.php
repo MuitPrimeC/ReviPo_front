@@ -1,4 +1,4 @@
-@include('share.header');
+@include('share.header',['title' => 'テストタイトル']);
 
 <!-- Paste this area -->
 

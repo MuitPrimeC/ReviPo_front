@@ -1,4 +1,4 @@
-@include('share.header');
+@include('share.header',['title' => 'テストタイトル']);
 
 <!-- ここにレビュー投稿完了メッセージと前のページに戻るボタンを想定してい配置してください。 -->
 <!-- 例：https://cupy.p0x0q.com/yir62buq.png-->

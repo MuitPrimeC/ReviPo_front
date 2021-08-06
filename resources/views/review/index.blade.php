@@ -1,4 +1,4 @@
- @include('share.header')
+ @include('share.header',['title' => 'テストタイトル'])
 <!DOCTYPE HTML>
 <html lang="ja">
     <head>
@@ -19,7 +19,7 @@
 
     <body>
         <div class="container">
-         
+
         <div class="card-list">
             @foreach($movies as $movie)
             <div class="card mb-3">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             @endforeach
-            
+
         </div>
 
         <style>
@@ -53,7 +53,7 @@
         <div class="paginate d-flex justify-content-center">
             {{$movies->links('pagination::bootstrap-4')}}
         </div>
-        
+
         </div>
         <br><br>
     </body>

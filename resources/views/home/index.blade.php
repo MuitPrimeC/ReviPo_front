@@ -41,7 +41,7 @@
         <!-- ここまで（ところで、この.jsいるんか？） -->
     </head>
 <body>
-    @include('share.header')
+    @include('share.header',['title' => 'テストタイトル'])
     <!-- headerの読み込み -->
     <br>
     <div class="container-fluid">

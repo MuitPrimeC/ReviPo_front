@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>ここにページタイトル入れてね</title>
+        <title>@isset($title)
+            {{$title}}
+        @endisset</title>
 
         <!-- CSSの埋め込み -->
         <!-- 自作.CSSはこちらから追加で（パスは正しく入れてくれ） -->
@@ -27,7 +29,7 @@
                 <div class="search_box">
                     <input type="text" name="q" style="width: 300px;" placeholder="いま、気になる映画は？">
 
-                    
+
                     <button type="submit" class="btn btn-outline-dark">search</button>
                 </div>
             </form>

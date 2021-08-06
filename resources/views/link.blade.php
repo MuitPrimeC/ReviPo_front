@@ -1,4 +1,4 @@
-@include('share.header');
+@include('share.header',['title' => 'テストタイトル']);
 
 <a href="/signin">signin.html</a><br>
 <a href="/signup">signup.html</a><br>

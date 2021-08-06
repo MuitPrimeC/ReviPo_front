@@ -1,4 +1,4 @@
-@include('share.header');
+@include('share.header',['title' => 'テストタイトル']);
 
 <!doctype html>
 <html lang="ja" >
