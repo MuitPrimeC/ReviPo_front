@@ -82,11 +82,11 @@
                                     @foreach ($recommended as $r)
                                     @if ($loop->first)
                                     <div class="carousel-item active">
-                                        <img src="images/movie/{{$r->filename}}" class="d-block w-100" alt="Second">
+                                        <img src="images/movie/{{$r['filename']}}" class="d-block w-100" alt="Second">
                                     </div>
                                     @else
                                     <div class="carousel-item">
-                                        <img src="images/movie/{{$r->filename}}" class="d-block w-100" alt="Second">
+                                        <img src="images/movie/{{$r['filename']}}" class="d-block w-100" alt="Second">
                                     </div>
                                     @endif
                                     @endforeach
