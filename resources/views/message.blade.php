@@ -15,7 +15,7 @@
       <div class="card">
             <div class="card-body">
                 <h5>レビュー投稿完了</h5>
-                <p>レビュー投稿が完了しました。</p>
+                <p>レビュー投稿が完了しました。150ポイントゲットしました！</p>
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/movie/{{$movie->movie_id}}">前のページに戻る</a></button>
             </div>
       </div>

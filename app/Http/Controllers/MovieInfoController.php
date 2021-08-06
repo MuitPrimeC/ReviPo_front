@@ -27,8 +27,8 @@ class MovieInfoController extends Controller
             'user_id' => Auth::id(),
             'movie_id' => $movie_id,
         ]);
-        
-        $reviews = Review::where('movie_id',$movie->movie_id)->orderBy('updated_at', 'desc')->paginate(10);
+
+        $reviews = Review::where('movie_id', $movie->movie_id)->orderBy('updated_at', 'desc')->paginate(10);
 
         return view('movie/index', ['movie_id' => $movie_id, 'movie' => $movie, 'reviews' => $reviews]);
     }
@@ -57,13 +57,13 @@ class MovieInfoController extends Controller
             $movie = Movie::where(['movie_id' => $data['movie_id']]);
             $ave = Review::where(['movie_id' => $data['movie_id']])->avg("score");
             $movie->update(['score' => $ave]);
-            User::where('user_id', Auth::id())->update(['points' => Auth::user()->points + 10]);
+            User::where('user_id', Auth::id())->update(['points' => Auth::user()->points + 150]);
         });
 
         $value = 0;
         $movie = Movie::where(['movie_id' => $data['movie_id']])->first();
 
-        return view("message",['value' => $value,'movie' => $movie]);
+        return view("message", ['value' => $value, 'movie' => $movie]);
         //return _redirect("/movie/{$data['movie_id']}");
     }
 }
