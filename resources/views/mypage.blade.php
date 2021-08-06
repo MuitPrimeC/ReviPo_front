@@ -7,6 +7,7 @@
         <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="test.css">
+        <link rel="stylesheet" href="home_style.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     </head>
@@ -76,7 +77,10 @@
                                                 <h5 class="card-title"><a href="/movie/{{$review->movie->movie_id}}">movie title:{{$review->movie->title}}</a></h5>
                                                 <p class="card-text">review title:{{$review->title}}</p>
                                                 <p class="card-text">feature:{{$review->feature}}</p>
-                                                <p class="card-text">score:{{$review->score}}</p>
+                                                <p class="result-rating-rate">
+                                                    <span class="star5_rating" data-rate="{{round($review->score)}}"></span>
+                                                    <span class="number_rating">{{$review->score}}</span>
+                                                </p>
                                                 <p class="card-text">description:{{$review->description}}</p>
                                                 <p class="card-text"><small class="text-muted">{{$review->updeted_at}}</small></p>
                                             </div>
@@ -110,7 +114,10 @@
                                             <div class="col-md-8">
                                                 <div class="card-body">
                                                     <h5 class="card-title"><a href="/movie/{{$movie->movie_id}}">movie title:{{$movie->title}}</a></h5>
-                                                    <p class="card-text">score:{{$movie->score}}</p>
+                                                    <p class="result-rating-rate">
+                                                        <span class="star5_rating" data-rate="{{round($movie->score)}}"></span>
+                                                        <span class="number_rating">{{$movie->score}}</span>
+                                                    </p>
                                                     <p class="card-text"><small class="text-muted">{{$movie->updeted_at}}</small></p>
                                                 </div>
                                             </div>
