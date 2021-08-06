@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Movie;
 use App\Models\Recommended;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class PostRecommendedController extends Controller
 {
@@ -35,14 +35,24 @@ class PostRecommendedController extends Controller
         //     return ['code' => 403];
         // }
         // return ::insert(data);
-        $arr = implode(',', explode(',', $request->recommended_movie_ids));
-        $r = Recommended::where(['user_id' => Auth::id()]);
+        $valid_arr = [];
+        foreach (explode(',', $request->recommended_movie_ids) as $movie_id) {
+            if (Movie::where('movie_id', $movie_id)->exists()) {
+                array_push($valid_arr, $movie_id);
+            }
+        }
+        if ($valid_arr == []) {
+            $valid_str = "";
+        } else {
+            $valid_str = implode(',', $valid_arr);
+        }
+        $r = Recommended::where(['user_id' => $request->user_id]);
         if ($r->exists()) {
             $r->update([
-                'recommended_movie_ids' => $arr,
+                'recommended_movie_ids' => $valid_arr,
             ]);
         } else {
-            Recommended::insert(['user_id' => $request->user_id, 'recommended_movie_ids' => $arr]);
+            Recommended::insert(['user_id' => $request->user_id, 'recommended_movie_ids' => $valid_arr]);
         }
     }
 
