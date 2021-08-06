@@ -14,7 +14,7 @@
         <div class="card mb-3">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="/images/movie/{{$movie->filename}}" alt="...">
+                    <img src="/images/movie/{{$movie->filename}}" wight="350" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
