@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Movie;
 use App\Models\Recommended;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class PostRecommendedController extends Controller
 {
@@ -31,6 +32,7 @@ class PostRecommendedController extends Controller
         ];
         $request->validate($valid_dict);
         $data = $request->only(array_keys($valid_dict));
+        Log::debug($data);
         $valid_arr = [];
         foreach (explode(',', $request->recommended_movie_ids) as $movie_id) {
             if (Movie::where('movie_id', $movie_id)->exists()) {
