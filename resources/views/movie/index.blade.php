@@ -50,12 +50,12 @@
                       <p class="card-text">feature:{{$review->feature}}</p>
                       <p class="card-text">score:{{$review->score}}</p>
                       <p>
-                        <p><button type="submit" class="btn btn-primary">参考になった！</button></p>
                         <!--<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                           レビューの詳細を見る
                         </a>-->
                         <form role="form" method="post" action="/review_score">
-                        <input type="hidden" name="">
+                        <input type="hidden" name="review_id" value="{{$review->review_id}}">
+                        <p><button type="submit" class="btn btn-primary">{{$review->review_score}} 参考になった！</button></p>
                         </form>
                       </p>
 
