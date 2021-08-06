@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 Route::get('/', function () {
-    return view('link');
+    return _redirect('/home');
     // return _redirect('signup');
 });
 Route::any('/login', function () {
