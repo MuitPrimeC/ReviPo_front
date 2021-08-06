@@ -14,9 +14,13 @@ class Review extends Model
     protected $primaryKey = 'review_id';
     public $timestamps = true;
 
+    protected $guarded = [
+        'review_id',
+    ];
+
     public function user()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
     public function movie()
     {
